@@ -1,0 +1,9 @@
+username,email,password,expected,description
+userberhasil,user1@gmail.com,PassValid123,PASS,Register valid
+userberhasil,,PassValid123,FAIL,Email kosong
+,user2@gmail.com,PassValid123,FAIL,Username kosong
+user3,user3gmail.com,PassValid123,FAIL,Email tidak valid tanpa at
+user4,user4@gmail.com,123,FAIL,Password terlalu pendek
+user_existing,user5@gmail.com,PassValid123,FAIL,Username sudah dipakai
+user6,user6@gmail.com,,FAIL,Password kosong
+,,,,,FAIL,Semua data kosong
