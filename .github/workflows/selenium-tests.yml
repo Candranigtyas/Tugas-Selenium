@@ -25,7 +25,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; else echo "requirements.txt tidak ditemukan, melewati instalasi"; fi
 
       - name: Run Selenium Tests (Headless)
         run: |
