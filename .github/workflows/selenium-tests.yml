@@ -26,7 +26,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; else echo "requirements.txt tidak ditemukan, melewati instalasi"; fi
+          pip install pytest selenium pytest-selenium allure-pytest webdriver-manager
 
       - name: Run Selenium Tests (Headless)
         run: |
